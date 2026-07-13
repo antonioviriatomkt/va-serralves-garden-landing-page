@@ -1,0 +1,52 @@
+{
+  "luxury": {
+    "res": [
+      "hero",
+      "keyNumbers",
+      "gallery",
+      "location",
+      "availability",
+      "finishes",
+      "developer",
+      "investment",
+      "faq",
+      "finalCta"
+    ],
+    "inv": [
+      "hero",
+      "keyNumbers",
+      "gallery",
+      "investment",
+      "location",
+      "availability",
+      "finishes",
+      "developer",
+      "faq",
+      "finalCta"
+    ]
+  },
+  "mainstream": {
+    "res": [
+      "hero",
+      "keyNumbers",
+      "gallery",
+      "location",
+      "availability",
+      "developer",
+      "investment",
+      "faq",
+      "finalCta"
+    ],
+    "inv": [
+      "hero",
+      "keyNumbers",
+      "investment",
+      "gallery",
+      "location",
+      "availability",
+      "developer",
+      "faq",
+      "finalCta"
+    ]
+  }
+}

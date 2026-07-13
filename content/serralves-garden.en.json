@@ -1,0 +1,327 @@
+{
+  "locale": "en",
+  "development": {
+    "slug": "serralves-garden",
+    "name": "Serralves Garden",
+    "tagline": "Boavista Living",
+    "status": "Under construction",
+    "locationLabel": "Boavista, Porto",
+    "deliveryLabel": "Delivery Q1 2027",
+    "preset": "luxury",
+    "hero": {
+      "kicker": "Boavista · Porto",
+      "headline": "Serralves Garden — Boavista Living",
+      "subheadline": {
+        "res": "Fourteen residences beside Serralves, in Boavista. Light, a garden and a quiet life, moments from Porto.",
+        "inv": "A rare Boavista asset, beside Serralves. Signature architecture and value that endures."
+      },
+      "deliveryLabel": "Delivery — first quarter of 2027",
+      "ctaPrimary": "Request a private presentation",
+      "ctaSecondary": "Receive the dossier",
+      "chooser": {
+        "prompt": "Are you considering this residence —",
+        "live": "To live in",
+        "invest": "To invest"
+      },
+      "imageSlot": "hero.jpg"
+    },
+    "keyNumbers": {
+      "items": [
+        { "value": "14", "label": "Residences" },
+        { "value": "T2 – T4", "label": "Typologies" },
+        { "value": "147 – 392 m²", "label": "Areas" },
+        { "value": "Q1 2027", "label": "Delivery" },
+        { "value": "Boavista", "label": "Porto" }
+      ]
+    },
+    "gallery": {
+      "title": "Gallery",
+      "intro": "Architecture and interior renders. Final imagery is shared at the private presentation.",
+      "images": [
+        { "slot": "gallery-1.jpg", "caption": "Travertine façade" },
+        { "slot": "gallery-2.jpg", "caption": "Living room in natural light" },
+        { "slot": "gallery-3.jpg", "caption": "Gaggenau kitchen" },
+        { "slot": "gallery-4.jpg", "caption": "Private garden" },
+        { "slot": "gallery-5.jpg", "caption": "Principal suite" },
+        { "slot": "gallery-6.jpg", "caption": "Boavista, late afternoon" }
+      ],
+      "virtualTour": {
+        "label": "Virtual tour",
+        "note": "An immersive 3D walkthrough of the show apartment.",
+        "cta": "Open tour"
+      }
+    },
+    "location": {
+      "title": "Beside Serralves, in the heart of Boavista",
+      "lead": "On Rua Professor Augusto Nobre, a few steps from the Serralves Museum and Foundation.",
+      "body": [
+        "Boavista is one of Porto's most discreet residential addresses. Here, the Serralves gardens, the City Park and the culture of the city sit on the way home.",
+        "The residences open onto a private garden, with generous solar exposure and the rare calm of living beside one of the city's largest green spaces."
+      ],
+      "highlights": [
+        {
+          "title": "Serralves Museum",
+          "description": "Alongside the Foundation, the museum and its gardens."
+        },
+        {
+          "title": "City Park",
+          "description": "The country's largest urban park, minutes away."
+        },
+        {
+          "title": "Foz and the sea",
+          "description": "The ocean and the seafront, a short distance away."
+        },
+        {
+          "title": "Airport",
+          "description": "Francisco Sá Carneiro roughly 15 minutes away."
+        }
+      ],
+      "imageSlot": "location.jpg"
+    },
+    "availability": {
+      "title": "Availability",
+      "intro": "Current status of the fourteen residences. More than half are already committed.",
+      "priceLabel": "Upon request",
+      "requestPriceCta": "Request price",
+      "reserveCta": "Reserve",
+      "viewDetailsCta": "View details",
+      "viewListLabel": "List view",
+      "viewGridLabel": "Grid view",
+      "note": "Sold and reserved residences remain visible. Prices are shared at the private presentation.",
+      "columns": {
+        "unit": "Unit",
+        "typology": "Typology",
+        "floor": "Floor",
+        "total": "Total area",
+        "interior": "Interior",
+        "parking": "Parking",
+        "status": "Status",
+        "price": "Price"
+      },
+      "statusLabels": {
+        "available": "Available",
+        "reserved": "Reserved",
+        "sold": "Sold"
+      },
+      "detail": {
+        "heading": "Unit {unit}",
+        "interior": "Interior",
+        "balcony": "Balcony",
+        "yard": "Yard",
+        "terrace": "Terrace",
+        "garage": "Garage",
+        "total": "Total area",
+        "close": "Close"
+      }
+    },
+    "units": [
+      { "id": "A", "typology": "T3", "floor": 0, "totalM2": 294.75, "interiorM2": 144.2, "balconyM2": 79.25, "yardM2": 71.3, "terraceM2": null, "garageM2": 35.95, "parkingLabel": "2", "status": "available" },
+      { "id": "B", "typology": "T2", "floor": 0, "totalM2": 190.85, "interiorM2": 115.95, "balconyM2": 22.4, "yardM2": 52.5, "terraceM2": null, "garageM2": 22.38, "parkingLabel": "1 + storage", "status": "reserved" },
+      { "id": "C", "typology": "T2", "floor": 0, "totalM2": 190.85, "interiorM2": 115.95, "balconyM2": 22.4, "yardM2": 52.5, "terraceM2": null, "garageM2": 31.8, "parkingLabel": "1 + storage", "status": "available" },
+      { "id": "D", "typology": "T3", "floor": 0, "totalM2": 294.75, "interiorM2": 144.2, "balconyM2": 79.25, "yardM2": 71.3, "terraceM2": null, "garageM2": 46.9, "parkingLabel": "2", "status": "available" },
+      { "id": "E", "typology": "T3", "floor": 1, "totalM2": 243.52, "interiorM2": 160.7, "balconyM2": 82.82, "yardM2": null, "terraceM2": null, "garageM2": 38.5, "parkingLabel": "2", "status": "available" },
+      { "id": "F", "typology": "T2", "floor": 1, "totalM2": 147.52, "interiorM2": 115.95, "balconyM2": 31.57, "yardM2": null, "terraceM2": null, "garageM2": 38.15, "parkingLabel": "2", "status": "sold" },
+      { "id": "G", "typology": "T2", "floor": 1, "totalM2": 147.52, "interiorM2": 115.95, "balconyM2": 31.57, "yardM2": null, "terraceM2": null, "garageM2": 34.59, "parkingLabel": "2", "status": "reserved" },
+      { "id": "H", "typology": "T3", "floor": 1, "totalM2": 243.52, "interiorM2": 160.7, "balconyM2": 82.82, "yardM2": null, "terraceM2": null, "garageM2": 38.4, "parkingLabel": "2", "status": "available" },
+      { "id": "I", "typology": "T3", "floor": 2, "totalM2": 243.52, "interiorM2": 160.7, "balconyM2": 82.82, "yardM2": null, "terraceM2": null, "garageM2": 38.4, "parkingLabel": "2", "status": "sold" },
+      { "id": "J", "typology": "T2", "floor": 2, "totalM2": 147.52, "interiorM2": 115.95, "balconyM2": 31.57, "yardM2": null, "terraceM2": null, "garageM2": 38.3, "parkingLabel": "2", "status": "sold" },
+      { "id": "L", "typology": "T2", "floor": 2, "totalM2": 147.52, "interiorM2": 115.95, "balconyM2": 31.57, "yardM2": null, "terraceM2": null, "garageM2": 38.3, "parkingLabel": "2", "status": "sold" },
+      { "id": "M", "typology": "T3", "floor": 2, "totalM2": 243.52, "interiorM2": 160.7, "balconyM2": 82.82, "yardM2": null, "terraceM2": null, "garageM2": 38.5, "parkingLabel": "2", "status": "available" },
+      { "id": "N", "typology": "T4", "floor": 3, "totalM2": 392.3, "interiorM2": 179.5, "balconyM2": null, "yardM2": null, "terraceM2": 212.8, "garageM2": 69.45, "parkingLabel": "3", "status": "sold" },
+      { "id": "O", "typology": "T4", "floor": 3, "totalM2": 392.3, "interiorM2": 179.5, "balconyM2": null, "yardM2": null, "terraceM2": 212.8, "garageM2": 77.8, "parkingLabel": "3", "status": "reserved" }
+    ],
+    "finishes": {
+      "title": "Finishes & customization",
+      "intro": "Fine materials, chosen to endure. While under construction, there is still room to personalize.",
+      "items": [
+        { "title": "Gaggenau kitchen", "description": "Integrated, professional-grade appliances." },
+        { "title": "Travertine façade", "description": "Natural stone in a warm, timeless travertine beige." },
+        { "title": "Schindler lifts", "description": "Private, quiet access to every floor." },
+        { "title": "Underfloor heating", "description": "Radiant floors and ducted air conditioning." },
+        { "title": "Home automation", "description": "Integrated control of light, climate and security." },
+        { "title": "Solar & electric mobility", "description": "Solar panels, heat pumps and electric-vehicle chargers." },
+        { "title": "Wood floors", "description": "Laminated wood flooring across the living and private areas." },
+        { "title": "Ceramic bathrooms", "description": "Large-format ceramic surfaces." }
+      ]
+    },
+    "developer": {
+      "title": "A developer with a track record",
+      "lead": "VA Properties conceives, designs and builds a selective number of projects in prime locations across Portugal.",
+      "body": [
+        "More than sixteen developments across five regions, from the Algarve to Porto. Each project is closely overseen, from design to delivery.",
+        "With off-plan, trust is built on record. Serralves Garden is designed by the PHOCUS studio."
+      ],
+      "stats": [
+        { "value": "16+", "label": "Developments" },
+        { "value": "5", "label": "Regions" },
+        { "value": "14", "label": "Residences here" },
+        { "value": "8 / 14", "label": "Already committed" }
+      ],
+      "scarcityLine": "More than half of the residences are already committed.",
+      "architecture": {
+        "studio": "Architecture",
+        "architects": "PHOCUS — Pedro Moreira and Cristina Couto",
+        "note": "The studio behind the design and interiors of Serralves Garden."
+      }
+    },
+    "investment": {
+      "title": "An asset that endures",
+      "intro": "For buyers with a long horizon, Serralves Garden is a prime asset — for its location, its architecture and its rarity.",
+      "points": [
+        { "title": "Prime location", "body": "Boavista, beside Serralves — one of Porto's most stable addresses." },
+        { "title": "Signature architecture", "body": "PHOCUS design and fine materials, made to last." },
+        { "title": "Rarity", "body": "Fourteen residences only. Scarcity here is a fact, not a pitch." },
+        { "title": "Buying from abroad", "body": "Guidance in Portuguese and English, with remote presentations." }
+      ],
+      "repricing": {
+        "label": "Phase repricing",
+        "launch": "€770,000",
+        "current": "from €840,000",
+        "note": "The launch price against the current entry price, as phases sell through. No yield promises — only the project's own record."
+      },
+      "foreignBuyer": {
+        "title": "Buying from abroad",
+        "body": [
+          "We support international buyers throughout — legal and tax framing, translation and representation.",
+          "Video presentations, remote signing and guidance in Portuguese and English."
+        ]
+      },
+      "disclaimer": "General information only; not financial advice. Figures subject to confirmation."
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "intro": "The essentials of the process. Everything else is shared at the private presentation.",
+      "items": [
+        {
+          "q": "How does the buying process work?",
+          "a": "It begins with an enquiry through this page. A private presentation follows, with the full dossier — brochure, plans, finishing schedule and virtual tour — and guidance through to reservation and the CPCV."
+        },
+        {
+          "q": "Why are prices upon request?",
+          "a": "The residences are presented on request. Share your preferences — typology and timeline — and our team will send the price and availability of the relevant units."
+        },
+        {
+          "q": "What does buying off-plan mean?",
+          "a": "It means acquiring while still under construction, before completion. The purchase is formalized through a promissory contract (CPCV), with staged payments. Delivery is planned for the first quarter of 2027."
+        },
+        {
+          "q": "What is the level of finish?",
+          "a": "Premium finishes — a Gaggenau kitchen, stone and wood, underfloor heating, home automation and a sustainability package with solar panels and heat pumps."
+        },
+        {
+          "q": "Can you support international buyers?",
+          "a": "Yes. We guide the entire process in Portuguese and English, with remote presentations and legal and tax support."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "A private conversation, at your pace",
+      "body": {
+        "res": "Arrange a private presentation. We will walk you through the available residences, the plans and the finishing schedule — with no obligation.",
+        "inv": "Arrange a private presentation. We will discuss location, architecture and the value of the asset — with support for buying from abroad."
+      },
+      "ctaPrimary": "Request a private presentation",
+      "ctaSecondary": "Receive the dossier",
+      "note": "We reply in Portuguese or English. No pressure."
+    }
+  },
+  "ui": {
+    "localeName": "English",
+    "otherLocaleName": "Português",
+    "otherLocaleCode": "pt",
+    "nav": {
+      "availability": "Availability",
+      "location": "Location",
+      "contact": "Contact",
+      "languageSwitch": "Switch language"
+    },
+    "modeToggle": {
+      "label": "Intent",
+      "live": "Live",
+      "invest": "Invest"
+    },
+    "whatsapp": {
+      "label": "WhatsApp",
+      "prefill": "Hello. I'm interested in Serralves Garden and would like to know more."
+    },
+    "footer": {
+      "developer": "Developed by VA Properties.",
+      "address": "Rua Professor Augusto Nobre 436, Boavista, Porto",
+      "disclaimer": "Imagery and areas are indicative and subject to confirmation.",
+      "demoNotice": "Demo · Viriato"
+    },
+    "q0": {
+      "openLabel": "Request a private presentation",
+      "title": "Private presentation",
+      "stepOf": "Step {n} of {total}",
+      "steps": {
+        "typology": {
+          "title": "Which typology are you looking for?",
+          "help": "Choose the closest fit. Available ones are marked."
+        },
+        "purpose": {
+          "title": "Are you considering this residence —",
+          "help": "Confirm, so we can tailor the conversation.",
+          "live": "To live in",
+          "invest": "To invest"
+        },
+        "strategy": {
+          "title": "What is your strategy?",
+          "help": "It helps us prepare the presentation.",
+          "longTerm": "Long-term rental",
+          "shortTerm": "Short-term rental",
+          "resale": "Resale",
+          "ownUse": "Own use"
+        },
+        "timeline": {
+          "title": "What is your horizon?",
+          "help": "When you would like to decide.",
+          "within3": "0 – 3 months",
+          "within6": "3 – 6 months",
+          "within12": "6 – 12 months",
+          "beyond12": "More than 12 months"
+        },
+        "offplan": {
+          "title": "Delivery is planned for the first quarter of 2027. Does that work for you?",
+          "help": "This is an off-plan purchase, still under construction.",
+          "yes": "Yes, that works",
+          "no": "I prefer move-in ready"
+        },
+        "location": {
+          "title": "Where are you currently based?",
+          "help": "And which language you prefer for contact.",
+          "countryLabel": "Country",
+          "countryPlaceholder": "e.g. United Kingdom",
+          "languageLabel": "Preferred language",
+          "pt": "Portuguese",
+          "en": "English"
+        },
+        "contact": {
+          "title": "How can we reach you?",
+          "help": "We will be in touch discreetly.",
+          "name": "Name",
+          "email": "Email",
+          "phone": "Phone",
+          "consent": "By sending, you agree to be contacted by our team about Serralves Garden. Demo — no data is actually sent."
+        }
+      },
+      "buttons": {
+        "back": "Back",
+        "next": "Continue",
+        "submit": "Send request",
+        "close": "Close"
+      },
+      "confirmation": {
+        "title": "Thank you. We have your request.",
+        "body": "Our team will prepare the presentation and the residences best matched to your profile.",
+        "followUp": "Our team will be in touch shortly, in Portuguese or English.",
+        "whatsapp": "Continue on WhatsApp",
+        "done": "Back to the page"
+      },
+      "validation": {
+        "required": "Please complete this field.",
+        "email": "Please enter a valid email."
+      }
+    }
+  }
+}
