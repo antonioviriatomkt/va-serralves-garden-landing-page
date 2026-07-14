@@ -344,7 +344,7 @@ export function Q0Modal({
               )}
             </div>
 
-            <footer className="flex items-center justify-between gap-3 border-t border-travertine-200 px-6 py-4 sm:px-8">
+            <footer className="flex items-center justify-between gap-3 border-t border-travertine-200 px-6 pt-4 pb-[calc(1.75rem_+_env(safe-area-inset-bottom))] sm:px-8 sm:pb-4">
               <button
                 type="button"
                 onClick={goBack}
