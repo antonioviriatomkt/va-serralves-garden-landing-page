@@ -3,6 +3,7 @@
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Stagger, StaggerItem } from "@/components/motion/Stagger";
 import { EditorialImages } from "@/components/ui/EditorialImages";
+import { SpecMarquee } from "@/components/ui/SpecMarquee";
 import { registerModule, type ModuleProps } from "@/lib/modules/registry";
 
 function Finishes({ content }: ModuleProps) {
@@ -10,7 +11,11 @@ function Finishes({ content }: ModuleProps) {
   return (
     <Section id="finishes" tone="travertine">
       <SectionHeading kicker={content.tagline} title={f.title} intro={f.intro} />
-      <Stagger className="mt-10 grid gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+
+      {/* Kinetic spec band — headlines drift past, garage included */}
+      <SpecMarquee items={f.items} className="mt-10 sm:mt-12" />
+
+      <Stagger className="mt-12 grid gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
         {f.items.map((item) => (
           <StaggerItem
             key={item.title}
