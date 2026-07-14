@@ -37,7 +37,7 @@ function Hero({ content }: ModuleProps) {
     >
       {/* Text panel — cream, generous negative space */}
       <motion.div
-        className="order-2 flex flex-col justify-center bg-cream px-6 pb-16 pt-12 sm:px-10 lg:order-1 lg:px-16 lg:pb-20 lg:pt-24"
+        className="order-2 flex flex-col justify-center bg-cream px-6 pb-16 pt-12 text-center sm:px-10 lg:order-1 lg:px-16 lg:pb-20 lg:pt-24 lg:text-left"
         variants={reduce ? undefined : container}
         initial={reduce ? false : "hidden"}
         animate={reduce ? false : "visible"}
@@ -54,25 +54,24 @@ function Hero({ content }: ModuleProps) {
           <img
             src="/logo-serralves-garden-plum.svg"
             alt={hero.headline}
-            className="w-full max-w-md"
+            className="mx-auto w-full max-w-md lg:mx-0"
           />
         </motion.h1>
 
         <motion.p
           variants={reduce ? undefined : item}
-          className="mt-7 max-w-md text-lg leading-relaxed text-plum-700"
+          className="mt-7 mx-auto max-w-md text-lg leading-relaxed text-plum-700 lg:mx-0"
         >
           {hero.subheadline[mode]}
         </motion.p>
 
         <motion.div
           variants={reduce ? undefined : item}
-          className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center"
+          className="mt-9 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:items-start lg:justify-start"
         >
           <CtaButton
             variant="solid"
             arrow
-            className="self-start sm:self-auto"
             onClick={() => {
               t("hero_cta_clicked", { cta: "primary" });
               open({ source: "hero_primary" });
@@ -86,7 +85,7 @@ function Hero({ content }: ModuleProps) {
               t("dossier_requested", { context: "hero" });
               open({ source: "hero_dossier" });
             }}
-            className="nav-underline self-start text-sm font-medium text-plum-800 sm:self-auto"
+            className="nav-underline text-sm font-medium text-plum-800"
           >
             {hero.ctaSecondary}
           </button>
@@ -96,7 +95,7 @@ function Hero({ content }: ModuleProps) {
         {!resolved && (
           <motion.div
             variants={reduce ? undefined : item}
-            className="mt-8 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-ink/55"
+            className="mt-8 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-sm text-ink/55 lg:justify-start"
           >
             <span>{hero.chooser.prompt}</span>
             <span className="inline-flex items-center gap-2">
