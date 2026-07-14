@@ -29,10 +29,6 @@ function Hero({ content }: ModuleProps) {
   const { open } = useQ0();
   const reduce = useReducedMotion();
   const hero = content.hero;
-  const nums = content.keyNumbers.items;
-
-  // Three stats for the hairline strip: typology · residences · delivery.
-  const stats = [nums[1], nums[0], nums[3]].filter(Boolean);
 
   return (
     <section
@@ -124,33 +120,6 @@ function Hero({ content }: ModuleProps) {
             </span>
           </motion.div>
         )}
-
-        {/* Micro-stats — content-width cells, each value centred over its label */}
-        <motion.div
-          variants={reduce ? undefined : item}
-          className="mt-12 max-w-md border-t border-travertine-300 pt-6"
-        >
-          <dl className="flex items-start">
-            {stats.map((s, i) => {
-              const last = i === stats.length - 1;
-              return (
-                <div
-                  key={s.label}
-                  className={`text-center ${
-                    i > 0 ? "border-l border-travertine-300 pl-7" : ""
-                  } ${last ? "" : "pr-7"}`}
-                >
-                  <dt className="font-serif text-xl text-plum-800 sm:text-2xl">
-                    {s.value}
-                  </dt>
-                  <dd className="mt-1 text-[0.65rem] uppercase tracking-widest2 text-ink/50">
-                    {s.label}
-                  </dd>
-                </div>
-              );
-            })}
-          </dl>
-        </motion.div>
       </motion.div>
 
       {/* Image panel — clean architectural render */}

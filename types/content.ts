@@ -67,8 +67,9 @@ export interface GalleryImage {
 }
 
 export interface GalleryContent {
-  title: string;
-  intro: string;
+  kicker: string;
+  headline: string;
+  /** Master list of render "plates" scattered through the page (see composition). */
   images: GalleryImage[];
 }
 

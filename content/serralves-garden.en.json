@@ -12,8 +12,8 @@
       "kicker": "Boavista · Porto",
       "headline": "Serralves Garden — Boavista Living",
       "subheadline": {
-        "res": "Fourteen residences beside Serralves, in Boavista. Light, a garden and a quiet life, moments from Porto.",
-        "inv": "A rare Boavista asset, beside Serralves. Signature architecture and value that endures."
+        "res": "Fourteen residences shaped by the light of Serralves, each with a private garden and the rare calm of Boavista.",
+        "inv": "A prime address and signature architecture, across just fourteen homes — an asset made to endure."
       },
       "deliveryLabel": "Delivery — first quarter of 2027",
       "ctaPrimary": "Request a private presentation",
@@ -35,23 +35,23 @@
       ]
     },
     "gallery": {
-      "title": "Gallery",
-      "intro": "Architecture and interior renders. Final imagery is shared at the private presentation.",
+      "kicker": "Design & materials",
+      "headline": "Spaces shaped for light — travertine, timber and a garden that reaches into the home.",
       "images": [
-        { "slot": "gallery-1.jpg", "caption": "Travertine façade" },
         { "slot": "gallery-2.jpg", "caption": "Living room in natural light" },
-        { "slot": "gallery-3.jpg", "caption": "Gaggenau kitchen" },
         { "slot": "gallery-4.jpg", "caption": "Private garden" },
-        { "slot": "gallery-5.jpg", "caption": "Principal suite" },
-        { "slot": "gallery-6.jpg", "caption": "Boavista, late afternoon" }
+        { "slot": "gallery-6.jpg", "caption": "Boavista, late afternoon" },
+        { "slot": "street.jpg", "caption": "The development, beside Serralves" },
+        { "slot": "gallery-3.jpg", "caption": "Gaggenau kitchen" },
+        { "slot": "gallery-5.jpg", "caption": "Principal suite" }
       ]
     },
     "location": {
       "title": "Beside Serralves, in the heart of Boavista",
       "lead": "On Rua Professor Augusto Nobre, a few steps from the Serralves Museum and Foundation.",
       "body": [
-        "Boavista is one of Porto's most discreet residential addresses. Here, the Serralves gardens, the City Park and the culture of the city sit on the way home.",
-        "The residences open onto a private garden, with generous solar exposure and the rare calm of living beside one of the city's largest green spaces."
+        "Boavista is one of Porto's most discreet residential addresses — between the culture of Serralves, the green of the City Park and the nearness of the Foz seafront.",
+        "Each residence opens onto a private garden, with generous solar exposure and the rare quiet of living beside one of the city's largest green spaces."
       ],
       "highlights": [
         {
@@ -127,7 +127,7 @@
     ],
     "finishes": {
       "title": "Finishes & customization",
-      "intro": "Fine materials, chosen to endure. While under construction, there is still room to personalize.",
+      "intro": "Stone, timber and discreet technology — materials chosen to endure. Still under construction, there is room to personalize.",
       "items": [
         { "title": "Gaggenau kitchen", "description": "Integrated, professional-grade appliances." },
         { "title": "Travertine façade", "description": "Natural stone in a warm, timeless travertine beige." },
@@ -143,8 +143,8 @@
       "title": "A developer with a track record",
       "lead": "VA Properties conceives, designs and builds a selective number of projects in prime locations across Portugal.",
       "body": [
-        "More than sixteen developments across five regions, from the Algarve to Porto. Each project is closely overseen, from design to delivery.",
-        "With off-plan, trust is built on record. Serralves Garden is designed by the PHOCUS studio."
+        "More than sixteen developments across five regions, from the Algarve to Porto — each privately overseen, from design to delivery.",
+        "Off-plan, trust is built on a record. The architecture and interiors of Serralves Garden are by the PHOCUS studio."
       ],
       "stats": [
         { "value": "16+", "label": "Developments" },
@@ -161,7 +161,7 @@
     },
     "investment": {
       "title": "An asset that endures",
-      "intro": "For buyers with a long horizon, Serralves Garden is a prime asset — for its location, its architecture and its rarity.",
+      "intro": "For buyers with a long horizon, Serralves Garden brings together what holds value — a prime address, signature architecture and a deliberately scarce offering.",
       "points": [
         { "title": "Prime location", "body": "Boavista, beside Serralves — one of Porto's most stable addresses." },
         { "title": "Signature architecture", "body": "PHOCUS design and fine materials, made to last." },

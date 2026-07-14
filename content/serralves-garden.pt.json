@@ -12,8 +12,8 @@
       "kicker": "Boavista · Porto",
       "headline": "Serralves Garden — Boavista Living",
       "subheadline": {
-        "res": "Catorze residências junto a Serralves, na Boavista. Luz, jardim e uma vida serena, à porta do Porto.",
-        "inv": "Um ativo raro na Boavista, junto a Serralves. Arquitetura assinada e valor que perdura."
+        "res": "Catorze residências à luz de Serralves, com jardim privado e a serenidade rara da Boavista.",
+        "inv": "Um endereço prime e uma arquitetura assinada, em apenas catorze frações — um ativo pensado para durar."
       },
       "deliveryLabel": "Entrega — 1.º trimestre de 2027",
       "ctaPrimary": "Solicitar apresentação privada",
@@ -35,23 +35,23 @@
       ]
     },
     "gallery": {
-      "title": "Galeria",
-      "intro": "Renders de arquitetura e interiores. As imagens finais são partilhadas na apresentação privada.",
+      "kicker": "Desenho e materiais",
+      "headline": "Espaços desenhados para a luz — travertino, madeira e um jardim que entra pela casa.",
       "images": [
-        { "slot": "gallery-1.jpg", "caption": "Fachada em travertino" },
         { "slot": "gallery-2.jpg", "caption": "Sala com luz natural" },
-        { "slot": "gallery-3.jpg", "caption": "Cozinha Gaggenau" },
         { "slot": "gallery-4.jpg", "caption": "Jardim privado" },
-        { "slot": "gallery-5.jpg", "caption": "Suite principal" },
-        { "slot": "gallery-6.jpg", "caption": "A Boavista, ao fim da tarde" }
+        { "slot": "gallery-6.jpg", "caption": "A Boavista, ao fim da tarde" },
+        { "slot": "street.jpg", "caption": "O empreendimento, junto a Serralves" },
+        { "slot": "gallery-3.jpg", "caption": "Cozinha Gaggenau" },
+        { "slot": "gallery-5.jpg", "caption": "Suite principal" }
       ]
     },
     "location": {
       "title": "Junto a Serralves, no coração da Boavista",
       "lead": "Na Rua Professor Augusto Nobre, a poucos passos do Museu e Fundação de Serralves.",
       "body": [
-        "A Boavista é um dos endereços residenciais mais discretos do Porto. Aqui, os jardins de Serralves, o Parque da Cidade e a cultura da cidade ficam a caminho de casa.",
-        "As residências abrem-se para um jardim privado, com exposição solar generosa e a serenidade rara de viver ao lado de um dos maiores espaços verdes da cidade."
+        "A Boavista é um dos endereços residenciais mais discretos do Porto — entre a cultura de Serralves, o verde do Parque da Cidade e a proximidade da Foz.",
+        "Cada residência abre-se a um jardim privado, com exposição solar generosa e o silêncio raro de quem vive ao lado de um dos maiores espaços verdes da cidade."
       ],
       "highlights": [
         {
@@ -127,7 +127,7 @@
     ],
     "finishes": {
       "title": "Acabamentos e personalização",
-      "intro": "Materiais nobres, selecionados para durar. Em construção, há ainda espaço para personalizar.",
+      "intro": "Pedra, madeira e tecnologia discreta — materiais escolhidos para durar. Ainda em construção, há margem para personalizar.",
       "items": [
         { "title": "Cozinha Gaggenau", "description": "Eletrodomésticos integrados, de linha profissional." },
         { "title": "Fachada em travertino", "description": "Pedra natural em tom travertino beige, quente e intemporal." },
@@ -143,8 +143,8 @@
       "title": "Um promotor com provas dadas",
       "lead": "A VA Properties concebe, desenha e constrói um número seletivo de projetos em localizações prime de Portugal.",
       "body": [
-        "Mais de dezasseis empreendimentos em cinco regiões, do Algarve ao Porto. Cada projeto é acompanhado de perto, do desenho à entrega.",
-        "Em empreendimento off-plan, a confiança constrói-se com o histórico. O Serralves Garden é assinado pelo atelier PHOCUS."
+        "Mais de dezasseis empreendimentos em cinco regiões, do Algarve ao Porto — cada um acompanhado de perto, do desenho à entrega.",
+        "Em off-plan, a confiança constrói-se com o histórico. A arquitetura e os interiores do Serralves Garden são assinados pelo atelier PHOCUS."
       ],
       "stats": [
         { "value": "16+", "label": "Empreendimentos" },
@@ -161,7 +161,7 @@
     },
     "investment": {
       "title": "Um ativo que perdura",
-      "intro": "Para quem compra com um horizonte longo, o Serralves Garden é um ativo prime — pela localização, pela arquitetura e pela raridade.",
+      "intro": "Para quem compra com horizonte longo, o Serralves Garden reúne o que sustenta valor — localização prime, arquitetura assinada e uma oferta deliberadamente escassa.",
       "points": [
         { "title": "Localização prime", "body": "Boavista, junto a Serralves — um dos endereços mais estáveis do Porto." },
         { "title": "Arquitetura assinada", "body": "Desenho PHOCUS e materiais nobres, feitos para durar." },

@@ -2,6 +2,7 @@
 
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Stagger, StaggerItem } from "@/components/motion/Stagger";
+import { EditorialImages } from "@/components/ui/EditorialImages";
 import { registerModule, type ModuleProps } from "@/lib/modules/registry";
 
 function Finishes({ content }: ModuleProps) {
@@ -22,6 +23,13 @@ function Finishes({ content }: ModuleProps) {
           </StaggerItem>
         ))}
       </Stagger>
+
+      {/* Interior render plates */}
+      <EditorialImages
+        images={content.gallery.images.slice(4, 6)}
+        layout="pair"
+        className="mt-14 lg:mt-16"
+      />
     </Section>
   );
 }

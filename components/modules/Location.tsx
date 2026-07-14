@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Reveal } from "@/components/motion/Reveal";
+import { EditorialImages } from "@/components/ui/EditorialImages";
 import { Stagger, StaggerItem } from "@/components/motion/Stagger";
 import { useMode } from "@/lib/mode/ModeProvider";
 import { useTrack } from "@/lib/hooks/useTrack";
@@ -104,6 +105,13 @@ function Location({ content }: ModuleProps) {
           </div>
         </Reveal>
       </div>
+
+      {/* Context plates — the development in its setting */}
+      <EditorialImages
+        images={content.gallery.images.slice(2, 4)}
+        layout="pair"
+        className="mt-16 lg:mt-20"
+      />
     </Section>
   );
 }
