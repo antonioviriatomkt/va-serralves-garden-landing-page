@@ -8,10 +8,7 @@ import { registerModule, type ModuleProps } from "@/lib/modules/registry";
 function KeyNumbers({ content }: ModuleProps) {
   const items = content.keyNumbers.items;
   return (
-    <Section
-      tone="cream"
-      className="py-14 sm:py-20 lg:relative lg:z-10 lg:-mt-28 lg:pt-28 lg:shadow-[0_-22px_46px_-22px_rgba(45,42,38,0.30)]"
-    >
+    <Section tone="travertine" className="py-14 sm:py-20">
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <BuildingSketch className="mx-auto w-full max-w-md lg:mx-0" />
 
