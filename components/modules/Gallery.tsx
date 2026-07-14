@@ -34,13 +34,6 @@ function Gallery({ content }: ModuleProps) {
     }
   }
 
-  function engageTour() {
-    if (!engaged.current) {
-      engaged.current = true;
-      t("gallery_engaged", { context: "virtual_tour" });
-    }
-  }
-
   return (
     <Section id="gallery" tone="cream">
       <SectionHeading kicker={content.tagline} title={g.title} intro={g.intro} />
@@ -71,28 +64,6 @@ function Gallery({ content }: ModuleProps) {
           </StaggerItem>
         ))}
       </Stagger>
-
-      {/* Virtual-tour placeholder */}
-      <div className="mt-4 flex flex-col items-center justify-between gap-4 rounded-xl border border-travertine-300 bg-white px-6 py-6 sm:flex-row">
-        <div className="flex items-center gap-4">
-          <span className="flex h-12 w-12 items-center justify-center rounded-full bg-plum-800 text-cream">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
-              <path d="M8 5.5v13l11-6.5-11-6.5z" fill="currentColor" />
-            </svg>
-          </span>
-          <div>
-            <p className="font-serif text-lg text-plum-800">{g.virtualTour.label}</p>
-            <p className="text-sm text-ink/60">{g.virtualTour.note}</p>
-          </div>
-        </div>
-        <button
-          type="button"
-          onClick={engageTour}
-          className="rounded-full border border-plum-700 px-6 py-2.5 text-sm font-medium text-plum-800 transition hover:bg-plum-700 hover:text-cream"
-        >
-          {g.virtualTour.cta}
-        </button>
-      </div>
 
       <Lightbox
         images={g.images}

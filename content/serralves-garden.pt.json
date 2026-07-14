@@ -44,12 +44,7 @@
         { "slot": "gallery-4.jpg", "caption": "Jardim privado" },
         { "slot": "gallery-5.jpg", "caption": "Suite principal" },
         { "slot": "gallery-6.jpg", "caption": "A Boavista, ao fim da tarde" }
-      ],
-      "virtualTour": {
-        "label": "Visita virtual",
-        "note": "Um percurso 3D imersivo pelo apartamento-tipo.",
-        "cta": "Abrir visita"
-      }
+      ]
     },
     "location": {
       "title": "Junto a Serralves, no coração da Boavista",

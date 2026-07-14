@@ -44,12 +44,7 @@
         { "slot": "gallery-4.jpg", "caption": "Private garden" },
         { "slot": "gallery-5.jpg", "caption": "Principal suite" },
         { "slot": "gallery-6.jpg", "caption": "Boavista, late afternoon" }
-      ],
-      "virtualTour": {
-        "label": "Virtual tour",
-        "note": "An immersive 3D walkthrough of the show apartment.",
-        "cta": "Open tour"
-      }
+      ]
     },
     "location": {
       "title": "Beside Serralves, in the heart of Boavista",

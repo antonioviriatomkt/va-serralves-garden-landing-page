@@ -70,11 +70,6 @@ export interface GalleryContent {
   title: string;
   intro: string;
   images: GalleryImage[];
-  virtualTour: {
-    label: string;
-    note: string;
-    cta: string;
-  };
 }
 
 export interface LocationContent {
