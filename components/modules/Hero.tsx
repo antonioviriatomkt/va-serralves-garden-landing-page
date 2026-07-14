@@ -7,13 +7,11 @@ import { useTrack } from "@/lib/hooks/useTrack";
 import { useQ0 } from "@/lib/q0/Q0Provider";
 import { registerModule, type ModuleProps } from "@/lib/modules/registry";
 import { CtaButton } from "@/components/ui/CtaButton";
-import { ProgressiveBlur } from "@/components/ui/ProgressiveBlur";
-import { Magnetic } from "@/components/motion/Magnetic";
 import { DURATION, EASE_LUX, RISE, STAGGER } from "@/lib/motion";
 
 const container = {
   hidden: {},
-  visible: { transition: { staggerChildren: STAGGER, delayChildren: 0.35 } },
+  visible: { transition: { staggerChildren: STAGGER, delayChildren: 0.2 } },
 };
 
 const item = {
@@ -25,143 +23,154 @@ const item = {
   },
 };
 
-// Signature moment — the wordmark wipes in left-to-right.
-const wordmark = {
-  hidden: { clipPath: "inset(0 100% 0 0)" },
-  visible: {
-    clipPath: "inset(0 0% 0 0)",
-    transition: { duration: 1, ease: EASE_LUX },
-  },
-};
-
 function Hero({ content }: ModuleProps) {
-  const { resolved, chooseMode } = useMode();
+  const { resolved, chooseMode, mode } = useMode();
   const t = useTrack();
   const { open } = useQ0();
   const reduce = useReducedMotion();
   const hero = content.hero;
+  const nums = content.keyNumbers.items;
+
+  // Three stats for the hairline strip: typology · residences · delivery.
+  const stats = [nums[1], nums[0], nums[3]].filter(Boolean);
 
   return (
     <section
       id="top"
-      className="relative flex min-h-[88vh] items-end overflow-hidden bg-plum-900"
+      className="relative grid grid-cols-1 lg:min-h-[92vh] lg:grid-cols-[0.86fr_1fr]"
     >
-      {/* Image settles into place on load (Ken-Burns-lite) */}
+      {/* Text panel — cream, generous negative space */}
       <motion.div
-        className="absolute inset-0"
-        initial={reduce ? false : { scale: 1.08 }}
-        animate={reduce ? false : { scale: 1 }}
-        transition={{ duration: 1.8, ease: EASE_LUX }}
-      >
-        <Media
-          slot={hero.imageSlot}
-          alt={content.name}
-          rounded="rounded-none"
-          priority
-          showLabel={false}
-          className="h-full w-full"
-        />
-      </motion.div>
-
-      {/* Bottom tint band — fades out slightly above the wordmark */}
-      <div
-        aria-hidden
-        className="absolute inset-x-0 bottom-0 z-0 h-[47%] bg-gradient-to-t from-plum-900/78 via-plum-900/45 to-transparent"
-      />
-      {/* Progressive-blur lens on the same band (like the bottom bar) */}
-      <ProgressiveBlur
-        position="bottom"
-        fixed={false}
-        height="47%"
-        baseBlur={0.8}
-        layers={6}
-        className="z-0"
-      />
-
-      {/* Kicker — top, centered */}
-      <motion.p
-        className="absolute inset-x-0 top-[5.5rem] z-10 text-center text-xs uppercase tracking-widest2 text-cream/85 [text-shadow:0_1px_12px_rgba(36,16,25,0.6)]"
-        initial={reduce ? false : { opacity: 0, y: -8 }}
-        animate={reduce ? false : { opacity: 1, y: 0 }}
-        transition={{ duration: DURATION.slow, ease: EASE_LUX, delay: 0.15 }}
-      >
-        {hero.kicker}
-      </motion.p>
-
-      <motion.div
-        className="relative z-10 mx-auto w-full max-w-content px-5 pb-14 pt-28 text-center sm:px-8 sm:pb-20"
+        className="order-2 flex flex-col justify-center bg-cream px-6 pb-16 pt-12 sm:px-10 lg:order-1 lg:px-16 lg:pb-20 lg:pt-24"
         variants={reduce ? undefined : container}
         initial={reduce ? false : "hidden"}
         animate={reduce ? false : "visible"}
       >
-        <motion.h1
-          className="mx-auto max-w-2xl"
-          variants={reduce ? undefined : wordmark}
+        <motion.p
+          variants={reduce ? undefined : item}
+          className="text-xs uppercase tracking-widest2 text-brass"
         >
+          {hero.kicker}
+        </motion.p>
+
+        <motion.h1 variants={reduce ? undefined : item} className="mt-6">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/logo-serralves-garden.svg"
+            src="/logo-serralves-garden-plum.svg"
             alt={hero.headline}
-            className="mx-auto w-full max-w-lg drop-shadow-[0_1px_10px_rgba(36,16,25,0.35)] sm:max-w-2xl"
+            className="w-full max-w-md"
           />
         </motion.h1>
 
-        <motion.div
-          className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:justify-center"
+        <motion.p
           variants={reduce ? undefined : item}
+          className="mt-7 max-w-md text-lg leading-relaxed text-plum-700"
         >
-          <Magnetic className="w-full sm:w-auto">
-            <CtaButton
-              variant="light"
-              arrow
-              className="w-full sm:w-auto"
-              onClick={() => {
-                t("hero_cta_clicked", { cta: "primary" });
-                open({ source: "hero_primary" });
-              }}
-            >
-              {hero.ctaPrimary}
-            </CtaButton>
-          </Magnetic>
+          {hero.subheadline[mode]}
+        </motion.p>
+
+        <motion.div
+          variants={reduce ? undefined : item}
+          className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center"
+        >
           <CtaButton
-            variant="outline"
-            className="w-full sm:w-auto"
+            variant="solid"
+            arrow
+            className="self-start sm:self-auto"
+            onClick={() => {
+              t("hero_cta_clicked", { cta: "primary" });
+              open({ source: "hero_primary" });
+            }}
+          >
+            {hero.ctaPrimary}
+          </CtaButton>
+          <button
+            type="button"
             onClick={() => {
               t("dossier_requested", { context: "hero" });
               open({ source: "hero_dossier" });
             }}
+            className="nav-underline self-start text-sm font-medium text-plum-800 sm:self-auto"
           >
             {hero.ctaSecondary}
-          </CtaButton>
+          </button>
         </motion.div>
 
         {/* Intent chooser — only while intent is unresolved */}
         {!resolved && (
           <motion.div
-            className="mx-auto mt-10 flex flex-col items-center gap-3 border-t border-cream/15 pt-6 sm:flex-row sm:justify-center sm:gap-5"
             variants={reduce ? undefined : item}
+            className="mt-8 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-ink/55"
           >
-            <span className="text-sm text-cream/70">{hero.chooser.prompt}</span>
-            <div className="inline-flex overflow-hidden border border-cream/30">
+            <span>{hero.chooser.prompt}</span>
+            <span className="inline-flex items-center gap-2">
               <button
                 type="button"
                 onClick={() => chooseMode("res")}
-                className="px-5 py-2 text-sm text-cream transition hover:bg-cream/10"
+                className="nav-underline text-plum-800"
               >
                 {hero.chooser.live}
               </button>
-              <span aria-hidden className="w-px bg-cream/25" />
+              <span aria-hidden className="text-ink/30">
+                ·
+              </span>
               <button
                 type="button"
                 onClick={() => chooseMode("inv")}
-                className="px-5 py-2 text-sm text-cream transition hover:bg-cream/10"
+                className="nav-underline text-plum-800"
               >
                 {hero.chooser.invest}
               </button>
-            </div>
+            </span>
           </motion.div>
         )}
+
+        {/* Micro-stats — content-width cells, each value centred over its label */}
+        <motion.div
+          variants={reduce ? undefined : item}
+          className="mt-12 max-w-md border-t border-travertine-300 pt-6"
+        >
+          <dl className="flex items-start">
+            {stats.map((s, i) => {
+              const last = i === stats.length - 1;
+              return (
+                <div
+                  key={s.label}
+                  className={`text-center ${
+                    i > 0 ? "border-l border-travertine-300 pl-7" : ""
+                  } ${last ? "" : "pr-7"}`}
+                >
+                  <dt className="font-serif text-xl text-plum-800 sm:text-2xl">
+                    {s.value}
+                  </dt>
+                  <dd className="mt-1 text-[0.65rem] uppercase tracking-widest2 text-ink/50">
+                    {s.label}
+                  </dd>
+                </div>
+              );
+            })}
+          </dl>
+        </motion.div>
       </motion.div>
+
+      {/* Image panel — clean architectural render */}
+      <div className="relative order-1 h-[48vh] overflow-hidden bg-plum-900 lg:order-2 lg:h-auto">
+        <motion.div
+          className="h-full w-full"
+          initial={reduce ? false : { scale: 1.08 }}
+          animate={reduce ? false : { scale: 1 }}
+          transition={{ duration: 1.8, ease: EASE_LUX }}
+        >
+          <Media
+            slot={hero.imageSlot}
+            alt={content.name}
+            rounded="rounded-none"
+            priority
+            showLabel={false}
+            className="h-full w-full"
+          />
+        </motion.div>
+      </div>
     </section>
   );
 }
