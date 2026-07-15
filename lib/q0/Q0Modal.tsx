@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import type {
   DevelopmentContent,
   Typology,
@@ -46,6 +46,8 @@ export function Q0Modal({
   const { mode, locale } = useMode();
   const t = useTrack();
   const q = ui.q0;
+  // Localized "available" word — appended to option-card accessible names.
+  const availableLabel = development.availability.statusLabels.available;
 
   const availableTypologies = useMemo(
     () =>
@@ -314,33 +316,35 @@ export function Q0Modal({
                   answers={answers}
                   update={update}
                   availableTypologies={availableTypologies}
+                  availableLabel={availableLabel}
                   showError={showError}
                 />
               ) : (
-                <AnimatePresence mode="wait" custom={direction} initial={false}>
-                  <motion.div
-                    key={currentStep}
-                    custom={direction}
-                    variants={{
-                      enter: (d: number) => ({ opacity: 0, x: d * 40 }),
-                      center: { opacity: 1, x: 0 },
-                      exit: (d: number) => ({ opacity: 0, x: d * -40 }),
-                    }}
-                    initial="enter"
-                    animate="center"
-                    exit="exit"
-                    transition={{ duration: DURATION.micro, ease: EASE_LUX }}
-                  >
-                    <StepBody
-                      step={currentStep}
-                      q={q}
-                      answers={answers}
-                      update={update}
-                      availableTypologies={availableTypologies}
-                      showError={showError}
-                    />
-                  </motion.div>
-                </AnimatePresence>
+                // Keyed remount per step: React swaps the panel on every step
+                // change and the enter animation replays. Avoids the
+                // AnimatePresence `mode="wait"` exit-deadlock that could strand
+                // the view on the first step while the counter advanced.
+                <motion.div
+                  key={currentStep}
+                  custom={direction}
+                  variants={{
+                    enter: (d: number) => ({ opacity: 0, x: d * 40 }),
+                    center: { opacity: 1, x: 0 },
+                  }}
+                  initial="enter"
+                  animate="center"
+                  transition={{ duration: DURATION.micro, ease: EASE_LUX }}
+                >
+                  <StepBody
+                    step={currentStep}
+                    q={q}
+                    answers={answers}
+                    update={update}
+                    availableTypologies={availableTypologies}
+                    availableLabel={availableLabel}
+                    showError={showError}
+                  />
+                </motion.div>
               )}
             </div>
 
@@ -378,6 +382,7 @@ function StepBody({
   answers,
   update,
   availableTypologies,
+  availableLabel,
   showError,
 }: {
   step: StepKey;
@@ -385,6 +390,7 @@ function StepBody({
   answers: Q0Answers;
   update: <K extends keyof Q0Answers>(key: K, value: Q0Answers[K]) => void;
   availableTypologies: Typology[];
+  availableLabel: string;
   showError: boolean;
 }) {
   switch (step) {
@@ -392,15 +398,19 @@ function StepBody({
       return (
         <StepShell title={q.steps.typology.title} help={q.steps.typology.help}>
           <div className="grid grid-cols-3 gap-3">
-            {TYPOLOGIES.map((typ) => (
-              <OptionCard
-                key={typ}
-                selected={answers.typology === typ}
-                onClick={() => update("typology", typ)}
-                label={typ}
-                available={availableTypologies.includes(typ)}
-              />
-            ))}
+            {TYPOLOGIES.map((typ) => {
+              const available = availableTypologies.includes(typ);
+              return (
+                <OptionCard
+                  key={typ}
+                  selected={answers.typology === typ}
+                  onClick={() => update("typology", typ)}
+                  label={typ}
+                  available={available}
+                  ariaLabel={available ? `${typ} — ${availableLabel}` : typ}
+                />
+              );
+            })}
           </div>
         </StepShell>
       );
@@ -678,17 +688,20 @@ function OptionCard({
   available,
   selected,
   onClick,
+  ariaLabel,
 }: {
   label: string;
   available?: boolean;
   selected: boolean;
   onClick: () => void;
+  ariaLabel?: string;
 }) {
   return (
     <button
       type="button"
       onClick={onClick}
       aria-pressed={selected}
+      aria-label={ariaLabel}
       className={`flex flex-col items-center justify-center rounded-xl border px-3 py-5 text-center transition ${
         selected
           ? "border-plum-600 bg-plum-700 text-cream"
