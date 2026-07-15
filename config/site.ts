@@ -31,8 +31,8 @@ export const SITE = {
   name: "Serralves Garden",
   tagline: "Boavista Living",
   developmentSlug: "serralves-garden",
-  /** Placeholder WhatsApp number for the demo (VA Properties mobile). */
-  whatsappNumber: "351963562733",
+  /** VA Properties WhatsApp number (Portugal, international format for wa.me). */
+  whatsappNumber: "351920615683",
   /** Public base URL used for OG/canonical tags — resolved from env. */
   baseUrl: resolveBaseUrl(),
 } as const;
